@@ -1,12 +1,12 @@
 <template>
   <section class="py-16 px-4 font-poppins bg-black from-gray-900 via-gray-800 to-gray-700 text-white">
-    <div class="container mx-auto flex flex-row items-center md:gap-12">
+    <div class="container mx-auto flex flex-col md:flex-row items-center md:gap-12">
         <div class="flex flex-col max-w-md mb-12 md:mb-0 text-center justify-center">
             <span class="text-sm text-white font-light">Hello, I am</span>
             <h1 class="text-4xl text-white uppercase font-anton">Dawista</h1>
             <img src="../../public/image/section-2.png" class="ml-5" alt="about me image" />
         </div>
-        <div class="flex flex-col max-w-3xl gap-12">
+        <div class="flex flex-col max-w-2xl md:max-w-3xl px-8 md:px-0 gap-12">
             <div class="mb-4">
                 <h2 class="text-4xl text-white font-anton mb-4">ABOUT ME</h2>
                 <p class="text-lg leading-6 font-light">
@@ -17,9 +17,9 @@
                 Management (SMM) to combine design with more engaging content strategies.
                 </p>
             </div>
-            <div class="mb-4">
+            <div class="mb-4 w-full">
                 <h2 class="text-4xl text-white font-anton">WHAT I DO?</h2>
-                <div class="mt-6 flex flex-col md:flex-row gap-4">
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 place-items-center">
                     <Card
                         title="Graphic Design"
                         description="Creating visual designs for branding, social media content, posters, and other promotional materials with a clean and engaging style."
