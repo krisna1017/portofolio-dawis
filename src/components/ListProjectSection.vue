@@ -27,7 +27,7 @@
               class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_rgba(255,255,255,0.04)] transition duration-500 hover:-translate-y-1 hover:border-white/20"
             >
               <div
-                class="aspect-[4/5] w-full overflow-hidden rounded-3xl bg-cover bg-center transition duration-700 group-hover:scale-105"
+                class="aspect-4/5 w-full overflow-hidden rounded-3xl bg-cover bg-center transition duration-700 group-hover:scale-105"
                 :style="{ backgroundImage: project.image }"
               ></div>
               <div class="mt-5 flex flex-col gap-3">
