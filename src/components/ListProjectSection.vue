@@ -22,12 +22,24 @@
         <transition name="fade" mode="out-in">
           <div :key="activeTab" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <article
-              v-for="project in filteredProjects"
+              v-for="(project, index) in filteredProjects"
               :key="project.title"
-              class="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_rgba(255,255,255,0.04)] transition duration-500 hover:-translate-y-1 hover:border-white/20"
+              :class="[
+                'group overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_rgba(255,255,255,0.04)] transition duration-500 hover:-translate-y-1 hover:border-white/20',
+                activeTab === 'SOCIAL MEDIA' && index === 0
+                  ? 'sm:col-span-2 lg:col-span-2'
+                  : index === filteredProjects.length - 1 && filteredProjects.length % 4 === 1
+                    ? 'sm:col-span-2 lg:col-span-2'
+                    : '',
+                activeTab === 'SOCIAL MEDIA' && index === 1
+                  ? 'sm:col-span-2 lg:col-span-2'
+                  : index === filteredProjects.length - 1 && filteredProjects.length % 4 === 1
+                    ? 'sm:col-span-2 lg:col-span-2'
+                    : ''
+              ]"
             >
               <div
-                class="aspect-4/5 w-full overflow-hidden rounded-3xl bg-cover bg-center transition duration-700 group-hover:scale-105"
+                class="h-64 w-full bg-contain bg-no-repeat bg-center transition duration-700 group-hover:scale-105"
                 :style="{ backgroundImage: project.image }"
               ></div>
               <div class="mt-5 flex flex-col gap-3">
@@ -71,57 +83,134 @@ const projects = [
     category: 'DESIGN GRAPHIC',
     description: 'Digital poster and visual identity for event promotion.',
     tags: ['Poster', 'Illustration'],
-    image: 'linear-gradient(135deg, rgba(79,70,229,0.95), rgba(0,0,0,0.4))'
+    image: "url('/image/design-graphic/design graphic/1.png')"
   },
   {
     title: 'Giveaway Campaign',
     category: 'DESIGN GRAPHIC',
     description: 'Eye-catching social giveaway design with bright branding.',
     tags: ['Social', 'Promo'],
-    image: 'linear-gradient(135deg, rgba(16,185,129,0.95), rgba(0,0,0,0.35))'
+    image: "url('/image/design-graphic/design graphic/2.png')"
   },
   {
     title: 'Perlokok Peduli',
     category: 'DESIGN GRAPHIC',
     description: 'Brand campaign layout with custom typography and texture.',
     tags: ['Branding', 'Layout'],
-    image: 'linear-gradient(135deg, rgba(16,185,129,0.95), rgba(17,24,39,0.45))'
+    image: "url('/image/design-graphic/design graphic/3.png')"
+  },
+  {
+    title: 'Perlokok Peduli',
+    category: 'DESIGN GRAPHIC',
+    description: 'Brand campaign layout with custom typography and texture.',
+    tags: ['Branding', 'Layout'],
+    image: "url('/image/design-graphic/design graphic/4.png')"
+  },
+  {
+    title: 'Perlokok Peduli',
+    category: 'DESIGN GRAPHIC',
+    description: 'Brand campaign layout with custom typography and texture.',
+    tags: ['Branding', 'Layout'],
+    image: "url('/image/design-graphic/design graphic/5.png')"
+  },
+  {
+    title: 'Perlokok Peduli',
+    category: 'DESIGN GRAPHIC',
+    description: 'Brand campaign layout with custom typography and texture.',
+    tags: ['Branding', 'Layout'],
+    image: "url('/image/design-graphic/design graphic/6.png')"
+  },
+  {
+    title: 'Perlokok Peduli',
+    category: 'DESIGN GRAPHIC',
+    description: 'Brand campaign layout with custom typography and texture.',
+    tags: ['Branding', 'Layout'],
+    image: "url('/image/design-graphic/design graphic/7.png')"
+  },
+  {
+    title: 'Perlokok Peduli',
+    category: 'DESIGN GRAPHIC',
+    description: 'Brand campaign layout with custom typography and texture.',
+    tags: ['Branding', 'Layout'],
+    image: "url('/image/design-graphic/design graphic/8.png')"
+  },
+  {
+    title: 'Perlokok Peduli',
+    category: 'DESIGN GRAPHIC',
+    description: 'Brand campaign layout with custom typography and texture.',
+    tags: ['Branding', 'Layout'],
+    image: "url('/image/design-graphic/design graphic/9.png')"
   },
   {
     title: 'New Year Launch',
     category: 'SOCIAL MEDIA',
     description: 'Animated social tile series optimized for engagement.',
     tags: ['Instagram', 'Campaign'],
-    image: 'linear-gradient(135deg, rgba(59,130,246,0.95), rgba(15,23,42,0.45))'
+    image: "url('/image/sosmed/sosmed/1.png')",
   },
   {
     title: 'Balonku Babyshop',
     category: 'SOCIAL MEDIA',
     description: 'Creative promotional carousel for product awareness.',
     tags: ['Carousel', 'Content'],
-    image: 'linear-gradient(135deg, rgba(249,115,22,0.95), rgba(15,23,42,0.45))'
-  },
-  {
-    title: 'BOM Agency Drive',
-    category: 'SOCIAL MEDIA',
-    description: 'Campaign design for organic growth and reach.',
-    tags: ['Brand', 'Social'],
-    image: 'linear-gradient(135deg, rgba(236,72,153,0.95), rgba(15,23,42,0.45))'
+    image: "url('/image/sosmed/sosmed/2.png')"
   },
   {
     title: 'Travel App UI',
     category: 'UI/UX DESIGN',
     description: 'Modern mobile interface designed for easy booking flow.',
     tags: ['Figma', 'App'],
-    image: 'linear-gradient(135deg, rgba(14,165,233,0.95), rgba(15,23,42,0.45))'
+    image: "url('/image/ui-ux/ui-ux/1.png')"
   },
   {
     title: 'Dashboard Prototype',
     category: 'UI/UX DESIGN',
     description: 'Data dashboard layout with clean visual hierarchy.',
     tags: ['Dashboard', 'UX'],
-    image: 'linear-gradient(135deg, rgba(168,85,247,0.95), rgba(15,23,42,0.45))'
-  }
+    image: "url('/image/ui-ux/ui-ux/2.jpg')"
+  },
+  {
+    title: 'Travel App UI',
+    category: 'UI/UX DESIGN',
+    description: 'Modern mobile interface designed for easy booking flow.',
+    tags: ['Figma', 'App'],
+    image: "url('/image/ui-ux/ui-ux/3.png')"
+  },
+  {
+    title: 'Travel App UI',
+    category: 'UI/UX DESIGN',
+    description: 'Modern mobile interface designed for easy booking flow.',
+    tags: ['Figma', 'App'],
+    image: "url('/image/ui-ux/ui-ux/4.png')"
+  },
+  {
+    title: 'Travel App UI',
+    category: 'UI/UX DESIGN',
+    description: 'Modern mobile interface designed for easy booking flow.',
+    tags: ['Figma', 'App'],
+    image: "url('/image/ui-ux/ui-ux/5.png')"
+  },
+  {
+    title: 'Travel App UI',
+    category: 'UI/UX DESIGN',
+    description: 'Modern mobile interface designed for easy booking flow.',
+    tags: ['Figma', 'App'],
+    image: "url('/image/ui-ux/ui-ux/6.png')"
+  },
+  {
+    title: 'Travel App UI',
+    category: 'UI/UX DESIGN',
+    description: 'Modern mobile interface designed for easy booking flow.',
+    tags: ['Figma', 'App'],
+    image: "url('/image/ui-ux/ui-ux/7.png')"
+  },
+  {
+    title: 'Travel App UI',
+    category: 'UI/UX DESIGN',
+    description: 'Modern mobile interface designed for easy booking flow.',
+    tags: ['Figma', 'App'],
+    image: "url('/image/ui-ux/ui-ux/8.png')"
+  },
 ];
 
 const filteredProjects = computed(() => projects.filter((project) => project.category === activeTab.value));
