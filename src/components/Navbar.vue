@@ -1,7 +1,7 @@
 <template>
   <nav :class="['w-full h-20 hidden md:flex justify-center items-center fixed top-0 z-50 transition-all duration-300', isScrolled ? 'bg-black/20 backdrop-blur-sm' : 'bg-transparent']">
     <ul class="flex gap-2 md:gap-8 list-none">
-      <li><a href="#profile" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">PROFILE</a></li>
+      <li><a href="#about" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">PROFILE</a></li>
       <li><a href="#resume" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">RESUME</a></li>
       <li><a href="#project" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">PROJECT</a></li>
       <li><a href="#contact" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">CONTACT</a></li>

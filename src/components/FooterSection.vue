@@ -1,11 +1,11 @@
 ﻿<template>
-  <section id="contact" class="relative h-fit overflow-hidden px-12 py-12 rounded-t-4xl bg-black inset-shadow-sm inset-shadow-neutral-500 text-white font-poppins">
+  <section id="contact" class="relative h-full px-12 py-12 rounded-t-4xl bg-black inset-shadow-sm inset-shadow-neutral-500 text-white font-poppins backdrop-blur-3xl">
     <!-- <div class="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.16),transparent_35%),radial-gradient(circle_at_top_right,rgba(56,189,248,0.12),transparent_30%)] pointer-events-none"></div> -->
     <div class="container mx-auto relative z-10 px-4 md:px-14">
       <div class="flex flex-col gap-12 justify-center md:flex-row md:items-center md:justify-between">
         <div class="max-w-xl space-y-8">
           <div>
-            <h2 class="mt-4 text-3xl font-regular tracking-wider text-green-400 md:text-4xl uppercase font-anton">Portofolio Dawista</h2>
+            <h2 class="mt-4 text-2xl font-regular tracking-wider text-green-400 md:text-4xl uppercase font-anton">Portofolio Dawista</h2>
           </div>
 
           <div class="grid sm:grid-cols-1">

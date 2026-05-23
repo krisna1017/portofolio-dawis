@@ -1,5 +1,5 @@
 <template>
-  <section class="py-16 px-4 font-poppins bg-black from-gray-900 via-gray-800 to-gray-700 text-white" id="resume">
+    <section class="py-16 px-4 font-poppins bg-black from-gray-900 via-gray-800 to-gray-700 text-white" id="about">
     <div class="container mx-auto flex flex-col lg:flex-row items-center md:gap-12">
         <div class="relative flex flex-col max-w-sm mb-12 md:mb-0 text-center justify-center">
             <span class="text-sm text-white font-light">Hello, I am</span>

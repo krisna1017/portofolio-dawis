@@ -1,6 +1,13 @@
 ﻿<template>
-  <section class="py-16 px-4 font-poppins bg-black from-gray-900 via-gray-800 to-gray-700 text-white" id="project">
-    <div class="container mx-auto">
+    <section class="relative z-10 py-16 px-4 font-poppins bg-black from-gray-900 via-gray-800 to-gray-700 text-white h-full" id="project">
+      <div class="absolute -top-100 left-0 rotate-180">
+        <img src="/image/vector-4.png" class="w-96 h-200 max-sm:w-48 max-sm:h-180 object-fill blur-2xl" alt="hero section image" />
+      </div>
+
+    <div class="absolute -bottom-100 right-0 h-full w-full rotate-180">
+      <img src="../../public/image/vector-3.png" class="w-96 h-200 max-sm:w-48 max-sm:h-150 object-fill blur-2xl" alt="hero section image" />
+    </div>
+      <div class="container mx-auto relative">
       <div class="flex flex-col gap-10">
         <div class="flex flex-col items-center gap-4">
           <div class="inline-flex flex-wrap items-center justify-center gap-3 md:gap-6 lg:gap-12 rounded-full p-2 shadow-[0_0_40px_rgba(255,255,255,0.03)]">
@@ -25,7 +32,7 @@
               v-for="(project, index) in filteredProjects"
               :key="project.title"
               :class="[
-                'group overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_rgba(255,255,255,0.04)] transition duration-500 hover:-translate-y-1 hover:border-white/20',
+                'group overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-4 shadow-[0_20px_60px_rgba(255,255,255,0.04)] transition duration-500 hover:-translate-y-1 hover:border-white/20 backdrop-blur-4xl',
                 activeTab === 'SOCIAL MEDIA' && index === 0
                   ? 'sm:col-span-2 lg:col-span-2'
                   : index === filteredProjects.length - 1 && filteredProjects.length % 4 === 1
@@ -63,6 +70,8 @@
         </transition>
       </div>
     </div>
+
+
   </section>
 </template>
 
