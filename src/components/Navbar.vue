@@ -1,10 +1,57 @@
 <template>
   <nav :class="['w-full h-20 hidden md:flex justify-center items-center fixed top-0 z-50 transition-all duration-300', isScrolled ? 'bg-black/20 backdrop-blur-sm' : 'bg-transparent']">
     <ul class="flex gap-2 md:gap-8 list-none">
-      <li><a href="#about" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">PROFILE</a></li>
-      <li><a href="#resume" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">RESUME</a></li>
-      <li><a href="#project" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">PROJECT</a></li>
-      <li><a href="#contact" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl">CONTACT</a></li>
+      <li>
+        <a
+          href="#profile"
+          @click="setActive('#profile')"
+          :class="[
+            'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl',
+            activeMenu === '#profile' ? 'bg-green-600' : 'hover:bg-green-600'
+          ]"
+        >
+          PROFILE
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#resume"
+          @click="setActive('#resume')"
+          :class="[
+            'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl',
+            activeMenu === '#resume' ? 'bg-green-600' : 'hover:bg-green-600'
+          ]"
+        >
+          RESUME
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#project"
+          @click="setActive('#project')"
+          :class="[
+            'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl',
+            activeMenu === '#project' ? 'bg-green-600' : 'hover:bg-green-600'
+          ]"
+        >
+          PROJECT
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#contact"
+          @click="setActive('#contact')"
+          :class="[
+            'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl',
+            activeMenu === '#contact' ? 'bg-green-600' : 'hover:bg-green-600'
+          ]"
+        >
+          CONTACT
+        </a>
+      </li>
     </ul>
   </nav>
 
@@ -23,10 +70,58 @@
   <!-- drawer component -->
   <div v-if="isDrawerOpen" class="fixed top-0 right-0 hidden max-sm:inline-flex justify-center items-center z-40 h-screen p-4 overflow-y-hidden transition-transform bg-black w-full text-center" tabindex="-1" aria-labelledby="drawer-right-label">
     <ul class="flex flex-col gap-8 list-none">
-      <li><a href="#profile" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg">PROFILE</a></li>
-      <li><a href="#resume" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg">RESUME</a></li>
-      <li><a href="#project" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg">PROJECT</a></li>
-      <li><a href="#contact" class="text-white hover:bg-green-600 transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg">CONTACT</a></li>
+      <li>
+        <a href="#profile">
+          <button
+            @click="setActive('#profile')"
+            :class="[
+              'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg',
+              activeMenu === '#profile' ? 'bg-green-600' : 'hover:bg-green-600'
+            ]"
+          >
+            PROFILE
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#resume">
+                    <button
+            @click="setActive('#resume')"
+            :class="[
+              'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg',
+              activeMenu === '#resume' ? 'bg-green-600' : 'hover:bg-green-600'
+            ]"
+          >
+            RESUME
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#project">
+          <button
+            @click="setActive('#project')"
+            :class="[
+              'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg',
+              activeMenu === '#project' ? 'bg-green-600' : 'hover:bg-green-600'
+            ]"
+          >
+            PROJECT
+          </button>
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <button
+            @click="setActive('#contact')"
+            :class="[
+              'text-white transition-all duration-300 font-light px-3 py-1 rounded-xl text-lg',
+              activeMenu === '#contact' ? 'bg-green-600' : 'hover:bg-green-600'
+            ]"
+          >
+            CONTACT
+          </button>
+        </a>
+      </li>
     </ul>
   </div>
 </template>
@@ -38,6 +133,7 @@ export default {
     return {
       isScrolled: false,
       isDrawerOpen: false,
+      activeMenu: "#",
     };
   },
   mounted() {
@@ -52,6 +148,13 @@ export default {
     },
     toggleDrawer() {
       this.isDrawerOpen = !this.isDrawerOpen;
+    },
+    closeDrawer() {
+      this.isDrawerOpen = false;
+    },
+    setActive(menu) {
+      this.activeMenu = menu;
+      this.closeDrawer();
     },
   },
 };

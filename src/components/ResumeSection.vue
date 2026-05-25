@@ -1,9 +1,9 @@
 <template>
-    <section class="p-16 bg-black text-white font-poppins relative z-10" id="resume">
+    <section class="py-16 px-4 max-sm:py-22 max-sm:px-12 max-md:px-16 bg-black text-white font-poppins relative z-10" id="resume">
       <div class="absolute -top-80 right-0">
         <img src="/image/vector-4.png" class="w-96 h-200 max-sm:w-48 max-sm:h-180 object-fill blur-2xl" alt="hero section image" />
       </div>
-      <div class="container mx-auto p-0 md:p-6 lg:p-20 flex flex-col gap-16">
+      <div class="container mx-auto p-0 lg:p-20 flex flex-col gap-16">
         <div class="flex flex-col gap-4 p-0 md:p-4">
             <h2 class="uppercase font-anton text-5xl text-gray-300">Education</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
